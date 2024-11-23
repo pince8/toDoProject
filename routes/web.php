@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
-    return view('layout.app');
+Route::get('/testTemplate', function () {
+    return view('panel.layout.app');
 });
+
+Route::get('/panel/tasks/create', [TaskController::class,'createPage'])->name('panel.CreateTaskPage');
+Route::post('/panel/tasks/add', [TaskController::class,'addTask'])->name('panel.addTask');
+
