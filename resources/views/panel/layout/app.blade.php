@@ -65,7 +65,7 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{asset('panel/assets/js/config.js')}}"></script>
   </head>
-
+     
   <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
@@ -575,9 +575,9 @@
 
           <!-- Content wrapper -->
           <div class="content-wrapper">
-            <!-- Content -->
-
             
+
+            @yield('content');
             </div>
             <!-- / Content -->
 
