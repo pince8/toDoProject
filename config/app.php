@@ -83,8 +83,9 @@ return [
     |
     */
 
-    'locale' => 'en',
-
+    'locale' => 'tr',
+    'fallcack_locale'=>env('APP_FALLBACK_LOCALE','en'),
+    'faker_locale'=>env('APP_FAKER_LOCALE','en_US'),
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -168,6 +169,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
+        App\Providers\JetstreamServiceProvider::class,
     ])->toArray(),
 
     /*
